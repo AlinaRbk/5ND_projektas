@@ -17,7 +17,8 @@ class PaginationSettingFactory extends Factory
     public function definition()
     {
         return [
-            //
+           //
+
         ];
     }
 }

@@ -14,6 +14,14 @@ class TaskStatusSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('task_statuses')->insert([
+            'title' => 'Completed',
+        ]);
+        DB::table('task_statuses')->insert([
+            'title' => 'On Hold',
+        ]);
+        DB::table('task_statuses')->insert([
+            'title' => 'Started',
+        ]);
     }
 }
