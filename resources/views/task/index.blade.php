@@ -22,7 +22,7 @@
             <option value="desc" selected>Descending</option>
         @endif
     </select>    
-    <select name="paginateSetting">
+    <select name="page_limit">
         @foreach ($paginationSettings as $setting)
             @if ($paginateSetting == $setting->value)
                 <option selected value="{{ $setting->value }}">{{ $setting->title }}</option>
@@ -63,5 +63,9 @@
         @endforeach
      
     </table>
+    @if ($paginateSetting != 1) 
+    {!! $tasks->appends(Request::except('page'))->render() !!}
+    @endif
+
 </div>
 @endsection
