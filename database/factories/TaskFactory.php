@@ -17,7 +17,9 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+            'title' => $this->faker->firstName(),
+            'description' => $this->faker->sentence(5),
+            'status_id' => rand(1,3)     
+         ];
     }
 }

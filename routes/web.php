@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('tasks')->group(function() {
+
+    Route::get('', 'App\Http\Controllers\taskController@index')->name('task.index'); 
+});
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

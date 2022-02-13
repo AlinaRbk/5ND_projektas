@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
+    public function getTaskStatus() {
+        return $this-> belongsTo( TaskStatus::class, 'status_id','id' );
+    }   
 }
